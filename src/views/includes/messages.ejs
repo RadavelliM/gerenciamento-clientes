@@ -1,0 +1,24 @@
+<% if (errors.length> 0) { %>
+    <div class="row">
+        <div class="col my-4">
+            <div class="alert alert-danger text-center">
+                <% errors.forEach(err=> { %>
+                    <%= err %> <br>
+                        <% }) %>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+
+        <% if (success.length> 0) { %>
+            <div class="row">
+                <div class="col my-2">
+                    <div class="alert alert-success text-center">
+                        <% success.forEach(scs=> { %>
+                            <%= scs %> <br>
+                                <% }) %>
+                    </div>
+                </div>
+            </div>
+            <% } %>

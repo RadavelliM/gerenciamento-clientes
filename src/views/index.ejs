@@ -1,0 +1,55 @@
+<%- include('includes/head') %>
+
+  <%- include('includes/navbar') %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 mt-4">
+          <h1 class="text-center">AGENDA</h1>
+          <h1 class="text-center lead">Adicione, exclua, edite e veja seus contatos!</h1>
+
+  <%- include('includes/messages') %>
+
+  <% if(user) { %>
+          <div class="responsive-table text-center">
+            <table class="table my-3">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Sobrenome</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th colspan="2">Ações</th>
+                </tr>
+              </thead>
+
+              <% if(contatos.length > 0) { %>
+                <% contatos.forEach(cont => { %>
+                    <tr>
+                      <td><%= cont.nome %></td>
+                      <td><%= cont.sobrenome %></td>
+                      <td><%= cont.email %></td>
+                      <td><%= cont.telefone %></td>
+                      <td><a class="text-warning" href="/contato/edit/<%= cont.id %>">EDITAR</a></td>
+                      <td><a class="text-danger" href="/contato/delete/<%= cont.id %>">EXCLUIR</a></td>
+                    </tr>
+                  <% }) %>
+                <% } else { %>
+                  <h2 class="text-danger">Nenhum contato cadastrado no momento.</h2>
+                <% } %>
+
+            </table>
+          </div>
+
+          <% } else { %>
+              <h2 class="text-danger mt-4">Você precisa estar logado para ver seus contatos!</h2>
+          <% } %>
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <%- include('includes/footer') %>
