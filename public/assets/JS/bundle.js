@@ -35171,24 +35171,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  var loginForm = document.querySelector('.loginForm');
-  var objLogin = new _assets_js_modules_login_fieldValidator__WEBPACK_IMPORTED_MODULE_3__["default"](loginForm);
-  objLogin.init();
-});
+try {
+  document.addEventListener('DOMContentLoaded', function () {
+    var loginForm = document.querySelector('.loginForm');
+    var objLogin = new _assets_js_modules_login_fieldValidator__WEBPACK_IMPORTED_MODULE_3__["default"](loginForm);
+    objLogin.init();
+  });
+} catch (e) {
+  console.log();
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-  var register = document.querySelector('.register');
-  var objRegister = new _assets_js_modules_register_fieldValidator__WEBPACK_IMPORTED_MODULE_4__["default"](register);
-  objRegister.init();
-  if (!objRegister.errors) register.submit();
-});
+try {
+  document.addEventListener('DOMContentLoaded', function () {
+    var register = document.querySelector('.register');
+    var objRegister = new _assets_js_modules_register_fieldValidator__WEBPACK_IMPORTED_MODULE_4__["default"](register);
+    objRegister.init();
+  });
+} catch (e) {
+  console.log();
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-  var contact = document.querySelector('.contact');
-  var objContact = new _assets_js_modules_contact_fieldValidator__WEBPACK_IMPORTED_MODULE_5__["default"](contact);
-  objContact.init();
-});
+try {
+  document.addEventListener('DOMContentLoaded', function () {
+    var contact = document.querySelector('.contact');
+    var objContact = new _assets_js_modules_contact_fieldValidator__WEBPACK_IMPORTED_MODULE_5__["default"](contact);
+    objContact.init();
+  });
+} catch (e) {
+  console.log();
+}
 })();
 
 /******/ })()

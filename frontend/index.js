@@ -21,7 +21,6 @@ try {
         const objRegister = new Register(register)
         objRegister.init()
 
-        if (!objRegister.errors) register.submit()
     })
 } catch (e) { console.log() }
 
