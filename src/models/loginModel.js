@@ -24,9 +24,6 @@ class login {
             return
         }
 
-        console.log(typeof this.body.password)
-        console.log(typeof this.user.password)
-
         if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
             this.errors.push('Senha inválida')
             this.user = null
@@ -37,11 +34,11 @@ class login {
 
 
     cleanUp() {
-        // for (let key in this.body) {
-        //     if (typeof this.body[key] !== 'string') {
-        //         this.body[key] = ''
-        //     }
-        // }
+        for (let key in this.body) {
+            if (typeof this.body[key] !== 'string') {
+                this.body[key] = ''
+            }
+        }
 
         this.body = {
             email: this.body.email,

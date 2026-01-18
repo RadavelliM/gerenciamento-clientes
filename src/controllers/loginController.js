@@ -20,6 +20,7 @@ exports.register = async (req, res) => {
 
         req.flash('success', 'Logado com sucesso')
         req.session.user = LOGIN.user
+        req.session.emailUser = LOGIN.user.email
         req.session.save(function () {
             return res.redirect('/login')
         })

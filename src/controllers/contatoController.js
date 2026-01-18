@@ -8,7 +8,7 @@ exports.read = (req, res) => {
 
 exports.register = async (req, res) => {
      try {
-          const CONTATO = new contatoModel(req.body)
+          const CONTATO = new contatoModel(req.body, req.session.emailUser)
           await CONTATO.register()
 
           if (CONTATO.errors.length > 0) {

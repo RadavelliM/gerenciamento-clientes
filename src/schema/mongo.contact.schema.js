@@ -5,6 +5,7 @@ const ContatoSchema = new mongoose.Schema({
     sobrenome: {type: String, required: false, default: ''},
     email: {type: String, required: false, default: ''},
     telefone: {type: String, required: false, default: ''},
+    emailUsuario: {type: String, required: true},
     dataCriado: {type: Date, default: Date.now()}
 })
 

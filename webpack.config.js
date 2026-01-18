@@ -2,7 +2,7 @@ const path = require('path')
 
 // configuracao do webpack
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './frontend/index.js',
     output: {
         path: path.resolve(__dirname, 'public', 'assets', 'js'),

@@ -2,8 +2,9 @@ const validator = require('validator');
 const contatoSchema = require('../schema/mongo.contact.schema');
 
 class Contato {
-    constructor(body) {
+    constructor(body, email) {
         this.body = body
+        this.userEmail = email
         this.errors = []
         this.contato = null
     }
@@ -38,6 +39,7 @@ class Contato {
             sobrenome: this.body.sobrenome,
             email: this.body.email,
             telefone: this.body.telefone,
+            emailUsuario: this.userEmail
         }
     }
 
@@ -55,8 +57,8 @@ class Contato {
     }
 
 
-    static async findContact(id) {
-        const user = await contatoSchema.find(id).sort({ dataCriacao: 1 })
+    static async findContact(id, email) {
+        const user = await contatoSchema.find({ emailUsuario: email }).sort({ dataCriacao: 1 })
         return user
     }
 
