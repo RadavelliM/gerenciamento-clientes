@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Agenda</a>
-        <h3 class="navbar text-center text-danger"><%= user.nome %></h3>
+
+        <% if(user) { %>
+        <h3 class="navbar mb-auto ms-5 text-danger"><%= user.nome %></h3>
+        <% } %>
 
         <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
