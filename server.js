@@ -71,3 +71,5 @@ app.on('signal', () => {
         console.log('Acessar no endereco http://localhost:3000')
     })
 })
+
+// fetch('http:34.95.180.16/api/aluno').then(res => res.json()).then(res => console.log(res))
