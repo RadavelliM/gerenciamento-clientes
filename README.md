@@ -13,12 +13,13 @@
 <h3>📱Frontend:</h3>
 
 * EJS
+* Bootstrap
 * CSS
 * JavaScript
 
 <h3>🌐Database & Deploy:</h3>
 
-* MongoDB
+* MongoDB (AWS Cluster)
 * Google Cloud Platform (GCP)
 * Docker
 * NGINX
